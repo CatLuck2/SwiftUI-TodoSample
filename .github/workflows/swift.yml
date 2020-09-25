@@ -17,9 +17,3 @@ jobs:
       run: swift build -v
     - name: Run tests
       run: swift test -v
-    # Notify to slack when build and test succeeded
-    - name: Slack success notification
-    -　run: |
-          curl -X POST --data-urlencode 'payload={
-    　       "text": ":tada::tada::tada:${{github.repository}}: Build and Test succeeded！:tada::tada::tada:"
-          }'
